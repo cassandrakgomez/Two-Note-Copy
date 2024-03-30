@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">Two-Note</string>
+    <string name="sign_in_title">Two-Note</string>
+    <string name="sign_in_subtitle">Sign in to your account</string>
+    <string name="sign_in_button">Sign in</string>
+    <string name="sign_up_button">Sign up</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="email">Email</string>
+    <string name="username">username</string>
+    <string name="username_label">Username:</string>
+    <string name="password">password</string>
+    <string name="password_label">Password:</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="already_have_account">Already have an account?</string>
+    <string name="no_account">Don\'t have an account?</string>
+    <string name="sign_up_title">Create an account</string>
+    <string name="sign_up_subtitle">Sign up to get started</string>
 </resources>
