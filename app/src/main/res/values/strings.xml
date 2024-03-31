@@ -15,4 +15,5 @@
     <string name="no_account">Don\'t have an account?</string>
     <string name="sign_up_title">Create an account</string>
     <string name="sign_up_subtitle">Sign up to get started</string>
+    <string name="home_button">Home</string>
 </resources>
