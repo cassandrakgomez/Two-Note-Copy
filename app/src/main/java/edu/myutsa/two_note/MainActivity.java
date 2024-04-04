@@ -61,15 +61,21 @@ public class MainActivity extends AppCompatActivity {
         String str;
         String [] arr = null;
 
-        try{
+        try {
             scan = new Scanner(this.assets.open("login.txt"));
-            str = scan.nextLine();
-            arr = str.split(",");
+            while (scan.hasNextLine()) {
+                str = scan.nextLine();
+                arr = str.split(",");
+                if (username.equalsIgnoreCase(arr[1]) && password.equals(arr[2])) {
+                    return true;
+                }
+            }
             scan.close();
+            return false;
         }
         catch(IOException e){
             System.out.println("Error: " + e.getMessage());
         }
-        return username.equalsIgnoreCase(arr[1]) && password.equals(arr[2]);
+        return false;
     }
 }
