@@ -41,8 +41,10 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 EditText uText = (EditText) findViewById(R.id.userNameEditText);
                 EditText pText = (EditText) findViewById(R.id.passwordEditText);
-                if(authenticate(uText.getText().toString(), pText.getText().toString())){
+                int id = authenticate(uText.getText().toString(), pText.getText().toString());
+                if(id > 0){
                     Intent intent = new Intent(MainActivity.this, NoteSpaceActivity.class);
+                    intent.putExtra("id",id);
                     startActivity(intent);
                 }
                 else {
@@ -56,20 +58,31 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private boolean authenticate(String username, String password){
+    private int authenticate(String username, String password){
         Scanner scan;
         String str;
         String [] arr = null;
+        boolean authenticated = false;
+        int id = -1;
 
         try{
             scan = new Scanner(this.assets.open("login.txt"));
-            str = scan.nextLine();
-            arr = str.split(",");
+            while(scan.hasNext()){
+                str = scan.nextLine();
+                arr = str.split(",");
+                if(username.equalsIgnoreCase(arr[1]) && password.equals(arr[2])) {
+                    authenticated = true;
+                    id = Integer.parseInt(arr[0]);
+                    break;
+                }
+            }
             scan.close();
+
         }
+
         catch(IOException e){
             System.out.println("Error: " + e.getMessage());
         }
-        return username.equalsIgnoreCase(arr[1]) && password.equals(arr[2]);
+        return id;
     }
 }
