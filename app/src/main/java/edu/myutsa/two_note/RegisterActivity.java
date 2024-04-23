@@ -139,7 +139,5 @@ public class RegisterActivity extends ComponentActivity{
                 }
             }
         }
-
-
-    }
 }
+

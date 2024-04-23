@@ -24,6 +24,11 @@
         <activity
             android:name=".NoteSpaceActivity"
             android:exported="false" />
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false"
+            android:label="register_activity"
+            android:theme="@style/Theme.TwoNote" />
     </application>
 
 </manifest>

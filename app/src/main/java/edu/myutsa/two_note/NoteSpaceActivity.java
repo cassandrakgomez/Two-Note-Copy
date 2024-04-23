@@ -13,6 +13,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.annotation.Nullable;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -69,8 +70,8 @@ public class NoteSpaceActivity extends AppCompatActivity {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
             profileInfo = intent.getParcelableExtra("account", Account.class);
         }
-        TextView name = (TextView)  findViewById(R.id.profileUsername);
-        TextView email = (TextView) findViewById(R.id.profileName);
+        TextView name = (TextView)  findViewById(R.id.name);
+        TextView email = (TextView) findViewById(R.id.email);
         name.setText(profileInfo.getName());
         email.setText(profileInfo.getEmail());
     }

@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
     }
     private void setupButtons() {
         Button button1 = findViewById(R.id.signInButton);
-        Button button2 = findViewById(R.id.registerbutton);
+        Button button2 = findViewById(R.id.signUpButton);
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -47,25 +47,24 @@ public class MainActivity extends AppCompatActivity {
                 int id = authenticate(uText.getText().toString(), pText.getText().toString());
                 //Account account = authenticate(uText.getText().toString(), pText.getText().toString());;
                 //if(account != null){
-                if(id > 0) {
+                if (id > 0) {
                     Intent intent = new Intent(MainActivity.this, NoteSpaceActivity.class);
                     intent.putExtra("id", id);
                     startActivity(intent);
-                }                }
-                else {
+                } else {
                     uText.setText("");
                     pText.setText("");
                     uText.setError("Incorrect username/password");
                     pText.setError("Incorrect username/password");
                 }
-
+            }
         });
         button2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+                public void onClick (View v){
                 Intent intent = new Intent(MainActivity.this, RegisterActivity.class);
                 startActivity(intent);
             }
+
         });
     }
 
