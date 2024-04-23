@@ -3,6 +3,9 @@ package edu.myutsa.two_note;
 import android.content.Intent;
 import android.content.res.AssetManager;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -19,6 +22,7 @@ public class NoteSpaceActivity extends AppCompatActivity {
 
     private Account profileInfo;
     private AssetManager assets;
+    private Button button;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -56,5 +60,19 @@ public class NoteSpaceActivity extends AppCompatActivity {
         TextView email = (TextView) findViewById(R.id.email);
         name.setText(profileInfo.getName());
         email.setText(profileInfo.getEmail());
+    }
+
+    private void setupButtons() {
+        button = findViewById(R.id.signInButton);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                EditText uText = (EditText) findViewById(R.id.userNameEditText);
+                EditText pText = (EditText) findViewById(R.id.passwordEditText);
+                Intent intent = new Intent(NoteSpaceActivity.this, NavigationPage.class);
+                startActivity(intent);
+
+            }
+        });
     }
 }
