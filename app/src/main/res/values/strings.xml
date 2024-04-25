@@ -18,9 +18,8 @@
     <string name="home_button">Home</string>
     <string name="name" />
     <string name="emailName" />
-    <string name="register">Register</string>
-    <string name="register_instructions">Please fill out all fields:</string>
-    <string name="register_name">Name:</string>
-    <string name="register_email">Email:</string>
-    <string name="register_submit">SUBMIT</string>
+    <string name="NewNote">New Note</string>
+    <string name="MyNotes">My Notes</string>
+    <string name="Profile">Profile Page</string>
+    <string name="NavigationTitle">Navigation</string>
 </resources>
