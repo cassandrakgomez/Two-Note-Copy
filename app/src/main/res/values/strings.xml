@@ -18,4 +18,8 @@
     <string name="home_button">Home</string>
     <string name="name" />
     <string name="emailName" />
+    <string name="NewNote">New Note</string>
+    <string name="MyNotes">My Notes</string>
+    <string name="Profile">Profile Page</string>
+    <string name="NavigationTitle">Navigation</string>
 </resources>
