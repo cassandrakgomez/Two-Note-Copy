@@ -18,4 +18,9 @@
     <string name="home_button">Home</string>
     <string name="name" />
     <string name="emailName" />
+    <string name="register">Register</string>
+    <string name="register_instructions">Please fill out all fields:</string>
+    <string name="register_name">Name:</string>
+    <string name="register_email">Email:</string>
+    <string name="register_submit">SUBMIT</string>
 </resources>
