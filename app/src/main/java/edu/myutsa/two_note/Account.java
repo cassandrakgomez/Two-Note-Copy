@@ -1,11 +1,15 @@
 package edu.myutsa.two_note;
 
 import android.content.res.AssetManager;
+import android.os.Parcel;
+import android.os.Parcelable;
+
+import androidx.annotation.NonNull;
 
 import java.io.IOException;
 import java.util.Scanner;
 
-public class Account {
+public class Account implements Parcelable {
 
     private int id;
     private String name;
@@ -21,6 +25,22 @@ public class Account {
         this.id = id;
         setupFromFile(id, assets);
     }
+
+    protected Account(Parcel in) {
+        readFromParcel(in);
+    }
+
+    public static final Creator<Account> CREATOR = new Creator<Account>() {
+        @Override
+        public Account createFromParcel(Parcel in) {
+            return new Account(in);
+        }
+
+        @Override
+        public Account[] newArray(int size) {
+            return new Account[size];
+        }
+    };
     public int getId() {
         return id;
     }
@@ -65,5 +85,24 @@ public class Account {
         } catch (IOException e) {
             System.out.println("Error: " + e.getMessage());
         }
+    }
+    @Override
+    public int describeContents() {
+
+        return 0;
+
+    }
+
+    @Override
+    public void writeToParcel(@NonNull Parcel dest, int flags) {
+        dest.writeInt(id);
+        dest.writeString(name);
+        dest.writeString(email);
+    }
+
+    private void readFromParcel(Parcel in) {
+        id = in.readInt();
+        name = in.readString();
+        email = in.readString();
     }
 }
