@@ -45,4 +45,16 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.176" />
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="102dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="37dp"
+        android:text="@string/sign_out_button"
+        app:layout_constraintBottom_toBottomOf="@+id/landingPageHomeButton"
+        app:layout_constraintStart_toEndOf="@+id/landingPageHomeButton"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

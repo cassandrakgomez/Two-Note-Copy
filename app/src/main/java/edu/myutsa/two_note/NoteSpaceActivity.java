@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.content.res.AssetManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -21,7 +23,7 @@ public class NoteSpaceActivity extends AppCompatActivity {
 
     private Account profileInfo;
     //private AssetManager assets;
-
+    private ImageButton signoutButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -74,5 +76,15 @@ public class NoteSpaceActivity extends AppCompatActivity {
         TextView email = (TextView) findViewById(R.id.email);
         name.setText(profileInfo.getName());
         email.setText(profileInfo.getEmail());
+    }
+    //method called setupButtons
+    //sets up the buttons for the note space activity
+    private void setupButtons(){
+        signoutButton = findViewById(R.id.landingPageHomeButton);
+        signoutButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 }

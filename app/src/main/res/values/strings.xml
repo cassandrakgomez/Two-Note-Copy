@@ -23,4 +23,8 @@
     <string name="register_name">Name:</string>
     <string name="register_email">Email:</string>
     <string name="register_submit">SUBMIT</string>
+    <string name="Profile">Profile</string>
+    <string name="MyNotes">My Notes</string>
+    <string name="NavigationTitle">Two-Note</string>
+    <string name="sign_out_button">Sign Out</string>
 </resources>
