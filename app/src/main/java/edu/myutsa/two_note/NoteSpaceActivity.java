@@ -30,6 +30,7 @@ public class NoteSpaceActivity extends AppCompatActivity {
         setContentView(R.layout.landing_page);
         //assets = getAssets();
         setupProfile();
+        setupButtons();
         //setupProfile2();
     }
 
