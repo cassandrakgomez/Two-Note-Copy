@@ -6,6 +6,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -24,6 +25,7 @@ public class NoteSpaceActivity extends AppCompatActivity {
     private Account profileInfo;
     //private AssetManager assets;
     private ImageButton signoutButton;
+    private Button newnoteButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -85,6 +87,16 @@ public class NoteSpaceActivity extends AppCompatActivity {
         signoutButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 finish();
+            }
+        });
+
+        newnoteButton = findViewById(R.id.LandPagNewNote);
+        newnoteButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(NoteSpaceActivity.this, NoteDisplayActivity.class);
+                int id = intent.getIntExtra("id", -1);
+                intent.putExtra("id", id);
+                startActivity(intent);
             }
         });
     }

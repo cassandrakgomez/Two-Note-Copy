@@ -57,10 +57,16 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="303dp"
-        android:layout_height="339dp"
-        tools:layout_editor_absoluteX="54dp"
-        tools:layout_editor_absoluteY="342dp" />
+    <Button
+        android:id="@+id/LandPagNewNote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="75dp"
+        android:text="@string/landPageNewNote"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

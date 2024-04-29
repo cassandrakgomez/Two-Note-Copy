@@ -17,7 +17,7 @@ public class NoteManager {
     //Naming convention is ID of the user followed by the name of the note separated by an underscore
     public void addNote(String name, String content){
         Note note = new Note();
-        note.setName(userId+"_"+name);
+        note.setName(name);
         note.setContent(content);
         notes.add(note);
     }
