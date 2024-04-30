@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -47,10 +48,11 @@ public class NoteDisplayActivity extends AppCompatActivity {
                     OutputStreamWriter writer = new OutputStreamWriter(openFileOutput(id + "/" + name, MODE_PRIVATE));
                     writer.write(content);
                     writer.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
+                } catch (Exception e) {
+                    //toast
+                    Toast.makeText(getBaseContext(), "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
                 }
-                finish();
+                //finish();
             }
         });
     }
