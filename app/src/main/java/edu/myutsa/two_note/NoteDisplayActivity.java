@@ -43,16 +43,17 @@ public class NoteDisplayActivity extends AppCompatActivity {
                 String name = nameInput.getText().toString();
                 String content = contentInput.getText().toString();
                 //create a new file for the note
-                File f = new File(getFilesDir().getAbsolutePath() + "/" + id + "/" + name);
+                File f = new File(getFilesDir().getAbsolutePath() + "/" + id + "_" + name);
                 try {
-                    OutputStreamWriter writer = new OutputStreamWriter(openFileOutput(id + "/" + name, MODE_PRIVATE));
+                    OutputStreamWriter writer = new OutputStreamWriter(openFileOutput(id + "_" + name, MODE_PRIVATE));
                     writer.write(content);
                     writer.close();
-                } catch (Exception e) {
+                    finish();
+        } catch (Exception e) {
                     //toast
                     Toast.makeText(getBaseContext(), "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
                 }
-                //finish();
+
             }
         });
     }
