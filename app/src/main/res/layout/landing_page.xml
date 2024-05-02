@@ -23,17 +23,17 @@
 
     <TextView
         android:id="@+id/name"
-        android:layout_width="110dp"
-        android:layout_height="46dp"
+        android:layout_width="108dp"
+        android:layout_height="57dp"
         android:text="@string/name"
         android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/email"
-        app:layout_constraintHorizontal_bias="0.557"
+        app:layout_constraintHorizontal_bias="0.515"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.508" />
+        app:layout_constraintVertical_bias="0.477" />
 
     <TextView
         android:id="@+id/email"
@@ -46,46 +46,49 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.517" />
+        app:layout_constraintVertical_bias="0.476" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="331dp"
-        android:layout_height="495dp"
+        android:layout_width="334dp"
+        android:layout_height="211dp"
         android:layout_marginBottom="300dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.532"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@drawable/noted_meme_profile_picture_hello_developer_I_was_here" />
+        tools:srcCompat="@drawable/noted_meme_prof_pic" />
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="126dp"
+        android:id="@+id/LandingPageExitButton"
+        android:layout_width="244dp"
         android:layout_height="65dp"
         android:backgroundTint="#709176"
-        android:text="Exit"
+        android:text="@string/sign_out_button"
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.803"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.937" />
+        app:layout_constraintVertical_bias="0.96" />
 
     <Button
-        android:id="@+id/buttonNav"
-        android:layout_width="126dp"
+        android:id="@+id/LandPagNewNote"
+        android:layout_width="243dp"
         android:layout_height="65dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="181dp"
+        android:layout_marginEnd="84dp"
+        android:layout_marginBottom="14dp"
         android:backgroundTint="#709176"
-        android:text="Menu"
+        android:text="@string/nsaCreateNote"
         android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button"
-        app:layout_constraintHorizontal_bias="0.62"
+        app:layout_constraintBottom_toTopOf="@+id/LandingPageExitButton"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.937" />
+        app:layout_constraintTop_toBottomOf="@+id/name" />
 
     <TextView
         android:id="@+id/textView"
@@ -100,14 +103,42 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <Button
-        android:id="@+id/LandPagNewNote"
+        android:id="@+id/nsa_find_note_button"
+        android:layout_width="247dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="83dp"
+        android:layout_marginTop="116dp"
+        android:layout_marginEnd="82dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/nda_find_note_button"
+        app:layout_constraintBottom_toTopOf="@+id/LandPagNewNote"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name" />
+
+    <EditText
+        android:id="@+id/nsa_note_search_bar"
+        android:layout_width="249dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="85dp"
+        android:layout_marginEnd="77dp"
+        android:layout_marginBottom="18dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Name"
+        app:layout_constraintBottom_toTopOf="@+id/nsa_find_note_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
-        android:layout_marginBottom="75dp"
-        android:text="@string/landPageNewNote"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="16dp"
+        android:text="@string/noteSearchLabel"
+        app:layout_constraintBottom_toTopOf="@+id/nsa_note_search_bar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 

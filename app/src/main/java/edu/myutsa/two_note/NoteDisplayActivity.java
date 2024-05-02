@@ -23,13 +23,42 @@ import java.io.OutputStreamWriter;
 import java.util.Scanner;
 public class NoteDisplayActivity extends AppCompatActivity {
     private Button saveButton;
-    Intent intent = getIntent();
+
     //int id = intent.getIntExtra("id", -1);
     int id = 0;
+    String name = "";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.note_display_page);
+
+        Intent intent = getIntent();
+        if (intent.getBooleanExtra("search", false)) {
+            EditText noteNameInput = findViewById(R.id.ndpNoteNameInput);
+            EditText noteContentInput = findViewById(R.id.ndpNoteContentGT);
+            id = intent.getIntExtra("id", -1);
+            name = intent.getStringExtra("noteName");
+            noteNameInput.setText(name);
+            try {
+                File f = new File(getFilesDir().getAbsolutePath() + "/" + id + "_" + name);
+                String content = "";
+                if(f.exists()){
+                    Scanner scan = new Scanner(openFileInput(id + "_" + name));
+
+                    while (scan.hasNext()) {
+                        content += scan.nextLine() + "\n";
+                    }
+                }
+                else{
+                    Toast.makeText(getBaseContext(), "Note not found", Toast.LENGTH_SHORT).show();
+                }
+                noteContentInput.setText(content);
+            } catch (IOException e) {
+                Toast.makeText(getBaseContext(), "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        }
+
+
         setupButtons();
     }
     private void setupButtons(){
@@ -38,6 +67,7 @@ public class NoteDisplayActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //save note
+                id = getIntent().getIntExtra("id", -1);
                 EditText nameInput = (EditText) findViewById(R.id.ndpNoteNameInput);
                 EditText contentInput = (EditText) findViewById(R.id.ndpNoteContentGT);
                 String name = nameInput.getText().toString();
