@@ -4,7 +4,12 @@ import android.content.Intent;
 import android.content.res.AssetManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,13 +26,16 @@ public class NoteSpaceActivity extends AppCompatActivity {
 
     private Account profileInfo;
     //private AssetManager assets;
-
+    private Button signoutButton;
+    private Button newnoteButton;
+    private Button findnoteButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.landing_page);
         //assets = getAssets();
         setupProfile();
+        setupButtons();
         //setupProfile2();
     }
 
@@ -74,5 +82,48 @@ public class NoteSpaceActivity extends AppCompatActivity {
         TextView email = (TextView) findViewById(R.id.email);
         name.setText(profileInfo.getName());
         email.setText(profileInfo.getEmail());
+    }
+    //method called setupButtons
+    //sets up the buttons for the note space activity
+    private void setupButtons(){
+        signoutButton = findViewById(R.id.LandingPageExitButton);
+        signoutButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
+        newnoteButton = findViewById(R.id.LandPagNewNote);
+        newnoteButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                    Intent intent = getIntent();
+                    Intent newIntent = new Intent(NoteSpaceActivity.this, NoteDisplayActivity.class);
+                    int id = intent.getIntExtra("id", -1);
+                    newIntent.putExtra("id", id);
+                    newIntent.putExtra("search", false);
+                    startActivity(newIntent);
+            }
+        });
+
+        findnoteButton = findViewById(R.id.nsa_find_note_button);
+        findnoteButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = getIntent();
+                int id = intent.getIntExtra("id", -1);
+                EditText noteName = (EditText) findViewById(R.id.nsa_note_search_bar);
+                String name = noteName.getText().toString();
+                File f = new File(getFilesDir().getAbsolutePath() + "/" + id + "_" + name);
+                if(f.exists()){
+                    Intent newIntent = new Intent(NoteSpaceActivity.this, NoteDisplayActivity.class);
+                    newIntent.putExtra("id", id);
+                    newIntent.putExtra("noteName", name);
+                    newIntent.putExtra("search", true);
+                    startActivity(newIntent);
+                }
+                else{
+                    Toast.makeText(getBaseContext(), "Note not found", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
     }
 }

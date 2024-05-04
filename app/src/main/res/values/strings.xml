@@ -23,4 +23,15 @@
     <string name="register_name">Name:</string>
     <string name="register_email">Email:</string>
     <string name="register_submit">SUBMIT</string>
+    <string name="Profile">Profile</string>
+    <string name="MyNotes">My Notes</string>
+    <string name="NavigationTitle">Two-Note</string>
+    <string name="sign_out_button">Sign Out</string>
+    <string name="landPageNewNote">Create New Note</string>
+    <string name="ndp_note_name_label">Note Name:</string>
+    <string name="ndp_note_content_label">Note Content:</string>
+    <string name="ndp_save_button">Save</string>
+    <string name="nsaCreateNote">Create Note</string>
+    <string name="nda_find_note_button">Find Note\n</string>
+    <string name="noteSearchLabel">Enter the name of the note below</string>
 </resources>

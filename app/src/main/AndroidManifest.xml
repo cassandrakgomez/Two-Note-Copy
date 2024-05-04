@@ -12,6 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TwoNote"
         tools:targetApi="31">
+
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -29,6 +31,10 @@
             android:exported="false"
             android:label="register_activity"
             android:theme="@style/Theme.TwoNote" />
+        <activity
+            android:name=".NoteDisplayActivity"
+            android:exported="false"
+            android:label="register_activity"
+            android:theme="@style/Theme.TwoNote"/>
     </application>
-
 </manifest>
