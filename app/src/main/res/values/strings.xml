@@ -34,4 +34,5 @@
     <string name="nsaCreateNote">Create Note</string>
     <string name="nda_find_note_button">Find Note\n</string>
     <string name="noteSearchLabel">Enter the name of the note below</string>
+    <string name="search">Search</string>
 </resources>
