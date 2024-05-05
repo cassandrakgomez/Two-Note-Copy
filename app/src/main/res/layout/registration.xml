@@ -4,13 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/constraintLayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#E6F8B2">
 
     <TextView
         android:id="@+id/Title"
         android:layout_width="250dp"
         android:layout_height="81dp"
         android:layout_marginTop="56dp"
+        android:fontFamily="serif"
         android:text="@string/register"
         android:textAlignment="center"
         android:textColor="#090909"
@@ -26,6 +28,7 @@
         android:layout_width="349dp"
         android:layout_height="41dp"
         android:layout_marginTop="36dp"
+        android:fontFamily="serif"
         android:text="@string/register_instructions"
         android:textAlignment="center"
         android:textSize="24sp"
@@ -39,6 +42,7 @@
         android:layout_width="97dp"
         android:layout_height="29dp"
         android:layout_marginTop="56dp"
+        android:fontFamily="serif"
         android:text="@string/username_label"
         android:textAlignment="center"
         android:textSize="16sp"
@@ -53,6 +57,7 @@
         android:layout_width="93dp"
         android:layout_height="28dp"
         android:layout_marginTop="16dp"
+        android:fontFamily="serif"
         android:text="@string/password_label"
         android:textAlignment="center"
         android:textSize="16sp"
@@ -67,6 +72,7 @@
         android:layout_width="95dp"
         android:layout_height="28dp"
         android:layout_marginTop="28dp"
+        android:fontFamily="serif"
         android:text="@string/register_name"
         android:textAlignment="center"
         android:textSize="16sp"
@@ -80,7 +86,8 @@
         android:id="@+id/register_email"
         android:layout_width="96dp"
         android:layout_height="30dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="48dp"
+        android:fontFamily="serif"
         android:text="@string/register_email"
         android:textAlignment="center"
         android:textSize="16sp"
@@ -143,9 +150,70 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="100dp"
+        android:backgroundTint="#709176"
         android:text="@string/register_submit"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/mini_aesthetic_twonote" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="101dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="#79745C"
+        android:text="Button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.935"
+        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="40dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView6"
+        app:srcCompat="@drawable/lock" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="46dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="52dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView7"
+        app:srcCompat="@drawable/email" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="39dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="224dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        app:srcCompat="@drawable/icon" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="37dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        app:srcCompat="@drawable/nametag" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -68,7 +68,7 @@
         android:layout_width="102dp"
         android:layout_height="46dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="37dp"
+        android:layout_marginTop="40dp"
         android:text="@string/sign_out_button"
         app:layout_constraintBottom_toBottomOf="@+id/landingPageHomeButton"
         app:layout_constraintStart_toEndOf="@+id/landingPageHomeButton"
@@ -132,11 +132,12 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="300dp"
         android:layout_marginBottom="700dp"
+        android:src="@drawable/mini_aesthetic_twonote"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.554"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/mini_aesthetic_twonote" />
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
