@@ -33,7 +33,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.476" />
-
     <Button
         android:id="@+id/LandingPageExitButton"
         android:layout_width="243dp"
@@ -47,22 +46,26 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.96" />
 
     <Button
         android:id="@+id/LandPagNewNote"
         android:layout_width="243dp"
         android:layout_height="65dp"
         android:layout_marginStart="84dp"
+        android:layout_marginTop="181dp"
         android:layout_marginEnd="84dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="14dp"
         android:backgroundTint="#709176"
         android:text="@string/nsaCreateNote"
         android:textSize="25sp"
         app:layout_constraintBottom_toTopOf="@+id/LandingPageExitButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name" />
+
 
     <Button
         android:id="@+id/nsa_find_note_button"
