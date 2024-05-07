@@ -79,7 +79,7 @@ public class NoteDisplayActivity extends AppCompatActivity {
                     writer.write(content);
                     writer.close();
                     finish();
-        } catch (Exception e) {
+                } catch (Exception e) {
                     //toast
                     Toast.makeText(getBaseContext(), "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
                 }
