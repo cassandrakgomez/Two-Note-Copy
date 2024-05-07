@@ -161,21 +161,21 @@
         android:id="@+id/imageView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/mini_aesthetic_twonote"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/mini_aesthetic_twonote" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="150dp"
         android:layout_height="42dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="16dp"
         android:backgroundTint="#79745C"
         android:text="Privacy Policy"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.935"
+        app:layout_constraintHorizontal_bias="0.908"
         app:layout_constraintStart_toEndOf="@+id/imageView3"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -183,10 +183,10 @@
         android:id="@+id/imageView4"
         android:layout_width="40dp"
         android:layout_height="24dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="29dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView6"
-        app:srcCompat="@drawable/password" />
+        android:src="@drawable/password" />
 
     <ImageView
         android:id="@+id/imageView5"
@@ -196,25 +196,24 @@
         android:layout_marginTop="35dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView7"
-        app:srcCompat="@drawable/email" />
+        android:src="@drawable/email" />
 
     <ImageView
         android:id="@+id/imageView6"
         android:layout_width="39dp"
         android:layout_height="25dp"
-        android:layout_marginTop="248dp"
+        android:layout_marginTop="235dp"
+        android:src="@drawable/email"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3"
-        app:srcCompat="@drawable/email"
-        android:src="@" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <ImageView
         android:id="@+id/imageView7"
         android:layout_width="37dp"
         android:layout_height="23dp"
         android:layout_marginStart="1dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="33dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView4"
-        app:srcCompat="@drawable/name" />
+        android:src="@drawable/name" />
 </androidx.constraintlayout.widget.ConstraintLayout>
