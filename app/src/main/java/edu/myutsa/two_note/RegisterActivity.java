@@ -1,5 +1,6 @@
 package edu.myutsa.two_note;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -23,6 +24,7 @@ public class RegisterActivity extends ComponentActivity{
 
         private void setupButtons() {
             Button button1 = (Button) findViewById(R.id.register_submit);
+            Button button2 = (Button) findViewById(R.id.privacy_policy_button);
             button1.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
                     int id = -1;
@@ -48,6 +50,13 @@ public class RegisterActivity extends ComponentActivity{
                         email_input.setError("All fields must be filled out");
                     }
 
+                }
+            });
+
+            button2.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    Intent intent = new Intent(RegisterActivity.this, PrivacyPolicyActivity.class);
+                    startActivity(intent);
                 }
             });
         }
