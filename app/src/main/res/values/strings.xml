@@ -23,4 +23,19 @@
     <string name="register_name">Name:</string>
     <string name="register_email">Email:</string>
     <string name="register_submit">SUBMIT</string>
+    <string name="Profile">Profile</string>
+    <string name="MyNotes">My Notes</string>
+    <string name="NavigationTitle">Two-Note</string>
+    <string name="sign_out_button">Sign Out</string>
+    <string name="landPageNewNote">Create New Note</string>
+    <string name="ndp_note_name_label">Note Name:</string>
+    <string name="ndp_note_content_label">Note Content:</string>
+    <string name="ndp_save_button">Save</string>
+    <string name="nsaCreateNote">Create Note</string>
+    <string name="nda_find_note_button">Find Note\n</string>
+    <string name="noteSearchLabel">Enter the name of the note below</string>
+    <string name="search">Search</string>
+    <string name="privacy_policy_header">Privacy Policy</string>
+    <string name="privacy_policy_title">EFFECTIVE MAY 10, 2024</string>
+    <string name="privacy_policy_body"><![CDATA[MAAMEC(us, we, or our) operates the Two-Note mobile application (hereinafter referred to as the Service). We here at MAAMEC value your privacy. It means a great deal to us that you would choose this Service to store your sensitive information. It is our responsibility to let you know that this app is COMPLETELY unsecure and we CANNOT guarantee the safety and/or security of you, your loved ones, or your stored information. Put it this way: We respect privacy so much that WE ARE NOT RESPONSIBLE FOR IT. Grow up! Use well-known software and apps in the future you dink! P.S.: Change your password while you\'re at it. By now, it Has been leaked worldwide!]]></string>
 </resources>

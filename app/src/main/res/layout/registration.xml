@@ -4,13 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/constraintLayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#E6F8B2">
 
     <TextView
         android:id="@+id/Title"
         android:layout_width="250dp"
         android:layout_height="81dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="80dp"
+        android:fontFamily="serif"
         android:text="@string/register"
         android:textAlignment="center"
         android:textColor="#090909"
@@ -26,6 +28,7 @@
         android:layout_width="349dp"
         android:layout_height="41dp"
         android:layout_marginTop="36dp"
+        android:fontFamily="serif"
         android:text="@string/register_instructions"
         android:textAlignment="center"
         android:textSize="24sp"
@@ -39,6 +42,7 @@
         android:layout_width="97dp"
         android:layout_height="29dp"
         android:layout_marginTop="56dp"
+        android:fontFamily="serif"
         android:text="@string/username_label"
         android:textAlignment="center"
         android:textSize="16sp"
@@ -50,9 +54,10 @@
 
     <TextView
         android:id="@+id/register_password"
-        android:layout_width="93dp"
-        android:layout_height="28dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="97dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="26dp"
+        android:fontFamily="serif"
         android:text="@string/password_label"
         android:textAlignment="center"
         android:textSize="16sp"
@@ -64,9 +69,10 @@
 
     <TextView
         android:id="@+id/register_name"
-        android:layout_width="95dp"
-        android:layout_height="28dp"
-        android:layout_marginTop="28dp"
+        android:layout_width="97dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="26dp"
+        android:fontFamily="serif"
         android:text="@string/register_name"
         android:textAlignment="center"
         android:textSize="16sp"
@@ -78,9 +84,10 @@
 
     <TextView
         android:id="@+id/register_email"
-        android:layout_width="96dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="36dp"
+        android:layout_width="97dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="26dp"
+        android:fontFamily="serif"
         android:text="@string/register_email"
         android:textAlignment="center"
         android:textSize="16sp"
@@ -98,14 +105,14 @@
         android:ems="10"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.523"
+        app:layout_constraintHorizontal_bias="0.542"
         app:layout_constraintStart_toEndOf="@+id/register_username"
         app:layout_constraintTop_toBottomOf="@+id/instructions" />
 
     <EditText
         android:id="@+id/register_pw_input"
-        android:layout_width="239dp"
-        android:layout_height="41dp"
+        android:layout_width="240dp"
+        android:layout_height="43dp"
         android:layout_marginTop="12dp"
         android:ems="10"
         android:inputType="text"
@@ -116,21 +123,21 @@
 
     <EditText
         android:id="@+id/register_name_input"
-        android:layout_width="239dp"
-        android:layout_height="56dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="240dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="12dp"
         android:ems="10"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.058"
         app:layout_constraintStart_toStartOf="@+id/register_pw_input"
         app:layout_constraintTop_toBottomOf="@+id/register_pw_input" />
 
     <EditText
         android:id="@+id/register_email_input"
-        android:layout_width="236dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="240dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="12dp"
         android:ems="10"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
@@ -143,9 +150,70 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="100dp"
+        android:backgroundTint="#709176"
         android:text="@string/register_submit"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/mini_aesthetic_twonote"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/privacy_policy_button"
+        android:layout_width="150dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#79745C"
+        android:text="Privacy Policy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.908"
+        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="40dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="29dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView6"
+        android:src="@drawable/password" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="46dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="-3dp"
+        android:layout_marginTop="35dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView7"
+        android:src="@drawable/email" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="39dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="235dp"
+        android:src="@drawable/email"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="37dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="33dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        android:src="@drawable/name" />
 </androidx.constraintlayout.widget.ConstraintLayout>

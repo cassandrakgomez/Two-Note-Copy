@@ -98,6 +98,7 @@
             android:layout_marginEnd="148dp"
             android:layout_marginBottom="117dp"
             android:layout_weight="1"
+            android:backgroundTint="#709176"
             android:text="@string/sign_up_button"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -113,6 +114,7 @@
             android:layout_marginEnd="151dp"
             android:layout_marginBottom="8dp"
             android:layout_weight="1"
+            android:backgroundTint="#709176"
             android:text="@string/sign_in_button"
             android:textColorLink="#447A46"
             app:layout_constraintBottom_toTopOf="@+id/signUpButton"
@@ -128,7 +130,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/two_note_bigest" />
+            android:src="@drawable/big_aesthetic_two_note" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
